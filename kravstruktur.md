@@ -1,8 +1,6 @@
 ```mermaid
 graph TD
 
-  %% ===== Epic (bakgrund) =====
-  subgraph EpicA["Epic A<br/>IM21"]
 
     %% ===== Capabilities =====
     C_Miljo_lagring["Miljö & lagring i molnet<br/>IM31-1"]
