@@ -1,5 +1,5 @@
 ```mermaid
-graph LR
+graph TD
 
   %% ===== Epic (bakgrund) =====
   subgraph EpicA["Epic A<br/>IM21"]
