@@ -1,7 +1,6 @@
 ```mermaid
 graph TD
 
-
     %% ===== Capabilities =====
     C_Miljo_lagring["Miljö & lagring i molnet<br/>IM31-1"]
     C_Dokumentextrahering["Dokumentextrahering<br/>IM31-2"]
