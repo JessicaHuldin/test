@@ -1,5 +1,5 @@
 ```mermaid
-graph LR
+graph TD
 
   %% ===== Epic (bakgrund) =====
   subgraph EpicA["Epic A<br/>IM21"]
@@ -102,8 +102,4 @@ graph LR
   classDef story fill:#C5CDE9,stroke:#222,color:#000;
   classDef epic fill:#C5CDE9,stroke:#000,color:#000,stroke-dasharray: 5 5;
 
-  class C_Miljo_lagring,C_Dokumentextrahering,C_Annotering_feedback,C_Modelltraning_utvardering,C_Klassificering_hierarkier capability;
-  class F_11_Streamlit,F_12_Spara_molnet,F_21_Ontologi,F_31_Annotera,F_32_Redigera,F_41_Retrain,F_42_Evaluate_Analyze,F_51_PrimeArch feature;
-  class S_IM51_1,S_IM51_2,S_IM51_3,S_IM51_4,S_IM51_5,S_IM51_6,S_IM51_7,S_IM51_8,S_IM51_9,S_IM51_10,S_IM51_11,S_IM51_12,S_IM51_13,S_IM51_14,S_IM51_15,S_IM51_16,S_IM51_17 story;
-  class EpicA epic;
 ```mermaid
