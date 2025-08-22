@@ -1,5 +1,5 @@
 ```mermaid
-graph TD
+graph LR
 
   %% ===== Capabilities =====
   C_Miljo_lagring["Miljö & lagring i molnet<br/>IM31-1"]
