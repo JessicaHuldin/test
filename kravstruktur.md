@@ -1,5 +1,5 @@
 ```mermaid
-graph LR
+graph TD
 
   %% ===== Capabilities =====
   C_Miljo_lagring["Miljö & lagring i molnet<br/>IM31-1"]
@@ -52,44 +52,44 @@ graph LR
   S_IM51_16["IM51-16: Jag som annotator vill kunna märka upp en rubrik som R31, en paragraf som R41 och en mening som R51 så att vi får rätt klassificering<br/>IM51"]
   S_IM51_17["IM51-17: Jag som administratör vill att systemet bygger hierarkier (R51 under R41 under R31) så att vi kan analysera relationer mellan regler<br/>IM51"]
 
-  %% ===== Relationer =====
-  %% Feature -> Capability
-  F_11_Streamlit -- "ingår i" --> C_Miljo_lagring
-  F_12_Spara_molnet -- "ingår i" --> C_Miljo_lagring
+  %% ===== Relationer (vända för att styra layouten) =====
+  %% Capability -> Feature
+  C_Miljo_lagring -- "består av" --> F_11_Streamlit
+  C_Miljo_lagring -- "består av" --> F_12_Spara_molnet
 
-  F_21_Ontologi -- "ingår i" --> C_Dokumentextrahering
+  C_Dokumentextrahering -- "består av" --> F_21_Ontologi
 
-  F_31_Annotera -- "ingår i" --> C_Annotering_feedback
-  F_32_Redigera -- "ingår i" --> C_Annotering_feedback
+  C_Annotering_feedback -- "består av" --> F_31_Annotera
+  C_Annotering_feedback -- "består av" --> F_32_Redigera
 
-  F_41_Retrain -- "ingår i" --> C_Modelltraning_utvardering
-  F_42_Evaluate_Analyze -- "ingår i" --> C_Modelltraning_utvardering
+  C_Modelltraning_utvardering -- "består av" --> F_41_Retrain
+  C_Modelltraning_utvardering -- "består av" --> F_42_Evaluate_Analyze
 
-  F_51_PrimeArch -- "ingår i" --> C_Klassificering_hierarkier
+  C_Klassificering_hierarkier -- "består av" --> F_51_PrimeArch
 
-  %% Story -> Feature
-  S_IM51_1 -- "ingår i" --> F_11_Streamlit
-  S_IM51_2 -- "ingår i" --> F_11_Streamlit
+  %% Feature -> Story
+  F_11_Streamlit -- "består av" --> S_IM51_1
+  F_11_Streamlit -- "består av" --> S_IM51_2
 
-  S_IM51_3 -- "ingår i" --> F_12_Spara_molnet
-  S_IM51_4 -- "ingår i" --> F_12_Spara_molnet
+  F_12_Spara_molnet -- "består av" --> S_IM51_3
+  F_12_Spara_molnet -- "består av" --> S_IM51_4
 
-  S_IM51_5 -- "ingår i" --> F_21_Ontologi
-  S_IM51_6 -- "ingår i" --> F_21_Ontologi
-  S_IM51_7 -- "ingår i" --> F_21_Ontologi
+  F_21_Ontologi -- "består av" --> S_IM51_5
+  F_21_Ontologi -- "består av" --> S_IM51_6
+  F_21_Ontologi -- "består av" --> S_IM51_7
 
-  S_IM51_8 -- "ingår i" --> F_31_Annotera
-  S_IM51_9 -- "ingår i" --> F_31_Annotera
-  S_IM51_10 -- "ingår i" --> F_31_Annotera
-  S_IM51_11 -- "ingår i" --> F_32_Redigera
+  F_31_Annotera -- "består av" --> S_IM51_8
+  F_31_Annotera -- "består av" --> S_IM51_9
+  F_31_Annotera -- "består av" --> S_IM51_10
+  F_32_Redigera -- "består av" --> S_IM51_11
 
-  S_IM51_12 -- "ingår i" --> F_41_Retrain
-  S_IM51_13 -- "ingår i" --> F_41_Retrain
-  S_IM51_14 -- "ingår i" --> F_42_Evaluate_Analyze
-  S_IM51_15 -- "ingår i" --> F_42_Evaluate_Analyze
+  F_41_Retrain -- "består av" --> S_IM51_12
+  F_41_Retrain -- "består av" --> S_IM51_13
+  F_42_Evaluate_Analyze -- "består av" --> S_IM51_14
+  F_42_Evaluate_Analyze -- "består av" --> S_IM51_15
 
-  S_IM51_16 -- "ingår i" --> F_51_PrimeArch
-  S_IM51_17 -- "ingår i" --> F_51_PrimeArch
+  F_51_PrimeArch -- "består av" --> S_IM51_16
+  F_51_PrimeArch -- "består av" --> S_IM51_17
 
   %% ===== Färgklasser =====
   classDef capability fill:#C5CDE9,stroke:#222,color:#000;
