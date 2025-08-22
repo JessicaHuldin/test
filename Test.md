@@ -1,5 +1,4 @@
-graph TD
-
+```mermaid
   %% Emil - teknisk kedja
   Repo["Repo-struktur"] --> Azure["Azure Storage setup"]
   Azure --> Ingest["Ingest pipeline (PDF→Lines)"]
