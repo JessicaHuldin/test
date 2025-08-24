@@ -1,14 +1,14 @@
 ```mermaid
-flowchart TD
-    A[Story ready\nP51] --> B[Discuss\nX05]
-    B --> C[Vote\nP51]
-    C --> D{Agreement\nP52}
-    D -- No --> E[Discuss extremes\nP51]
+flowchart LR
+    A["Story ready\nX05"] --> B["Discuss\nP51"]
+    B --> C["Vote\nP51"]
+    C --> D{"Agreement\nP52"}
+    D -- No --> E["Discuss extremes\nP51"]
     E --> C
-    D -- Yes --> F[Assign story points\nP51]
-    F --> G[Plan sprint and create tasks\nP51]
-    G --> H[Do work and check DoD\nP51]
-    H --> I[PO acceptance\nP51]
+    D -- Yes --> F["Assign story points\nP51"]
+    F --> G["Plan sprint and create tasks\nP51"]
+    G --> H["Do work and check DoD\nP51"]
+    H --> I["PO acceptance\nP51"]
 
     %% Style
     style A fill:#138D18,stroke:#D9D9D9,color:#000000
