@@ -10,7 +10,7 @@ flowchart TD
     E -- Yes --> H[Assign Story Points]
     H --> I[Update backlog as input to Sprint Planning]
 %% Style
-    style A fill:#138D18,stroke:#000000,color:#000000
+    style A fill:#D9D9D9,stroke:#000000,color:#000000
     style B fill:#138D18,stroke:#000000,color:#000000
     style C fill:#138D18,stroke:#000000,color:#000000
     style D fill:#138D18,stroke:#000000,color:#000000
