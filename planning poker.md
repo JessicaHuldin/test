@@ -8,6 +8,7 @@ flowchart LR
     F --> D
     E -- Yes --> G["Assign story points<br/>P51"]
     G --> H["Update backlog as input to Sprint Planning <br/>P51"]
+
     %% Style
     style A fill:#D9D9D9,stroke:#000000,color:#000000
     style B fill:#138D18,stroke:#000000,color:#000000
