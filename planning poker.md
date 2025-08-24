@@ -1,5 +1,5 @@
 ```mermaid
-flowchart LR
+flowchart TD
     A[Story ready\nP51] --> B[Discuss\nX05]
     B --> C[Vote\nP51]
     C --> D{Agreement\nP52}
