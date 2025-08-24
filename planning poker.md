@@ -9,4 +9,14 @@ flowchart TD
     G --> E
     E -- Yes --> H[Assign Story Points]
     H --> I[Update backlog as input to Sprint Planning]
+%% Style
+    style A fill:#138D18,stroke:#000000,color:#000000
+    style B fill:#138D18,stroke:#000000,color:#000000
+    style C fill:#138D18,stroke:#000000,color:#000000
+    style D fill:#138D18,stroke:#000000,color:#000000
+    style E fill:#138D18,stroke:#000000,color:#000000
+    style F fill:#138D18,stroke:#000000,color:#000000
+    style G fill:#138D18,stroke:#000000,color:#000000
+    style H fill:#138D18,stroke:#000000,color:#000000
+    style I fill:#138D18,stroke:#000000,color:#000000
 ```mermaid
