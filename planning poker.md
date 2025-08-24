@@ -1,5 +1,5 @@
 ```mermaid
-flowchart TD
+flowchart LR
     A[Story identified and prioritized in Product Backlog] --> B[PO presents story, goals and acceptance criteria]
     B --> C[Q&A: team discusses scope and risks]
     C --> D[Vote #1 – Planning Poker cards 1, 2, 3, 5, 8, 13, 21]
