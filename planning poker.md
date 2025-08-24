@@ -1,4 +1,5 @@
 ```mermaid
+
 flowchart TD
     A[Story identifierad<br/>och prioriterad i Product Backlog] --> B[PO presenterar story<br/>målsättning & acceptanskriterier]
     B --> C[Frågor & förtydliganden<br/>teamet diskuterar omfattning & risker]
@@ -9,4 +10,5 @@ flowchart TD
     G --> E
     E -- Ja, samsyn nådd --> H[Story får estimerat värde<br/>(Story Points)]
     H --> I[Backlogen uppdateras<br/>underlag till Sprint Planning]
+
 ```mermaid
