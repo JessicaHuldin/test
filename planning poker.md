@@ -1,6 +1,6 @@
 ```mermaid
 flowchart LR
-    A["Story ready<br/>X05"] --> B["Discuss<br/>P51"]
+    A["Story ready<br/>X05"] --> B["PO presents story, goals and acceptence criteria<br/>P51"]
     B --> C["Vote<br/>P51"]
     C --> D{"Agreement<br/>P52"}
     D -- No --> E["Discuss extremes<br/>P51"]
