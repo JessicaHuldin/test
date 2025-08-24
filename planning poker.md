@@ -1,14 +1,13 @@
 ```mermaid
 flowchart LR
     A["Story ready<br/>X05"] --> B["PO presents story, goals and acceptence criteria<br/>P51"]
-    B --> C["Vote<br/>P51"]
-    C --> D{"Agreement<br/>P52"}
-    D -- No --> E["Discuss extremes<br/>P51"]
-    E --> C
-    D -- Yes --> F["Assign story points<br/>P51"]
-    F --> G["Plan sprint and create tasks<br/>P51"]
-    G --> H["Do work and check DoD<br/>P51"]
-    H --> I["PO acceptance<br/>P51"]
+    B --> C["Team discusses scope and risks<br/>P51"
+    C --> D["Vote planning poker cards 1,2,3,5,8,13,21<br/>P51"]
+    D --> E{"Agreement?<br/>P52"}
+    E -- No --> F["Discuss extremes: highest vs lowest, risks, assumption, dependencies<br/>P51"]
+    F --> C
+    E -- Yes --> G["Assign story points<br/>P51"]
+    G --> H["update vacklog as input to Sprint Planning <br/>P51"]
 
     %% Style
     style A fill:#D9D9D9,stroke:#000000,color:#000000
