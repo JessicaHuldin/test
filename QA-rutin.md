@@ -8,16 +8,16 @@ flowchart LR
   B1a --> B2([Ogiltig mening<br/>X05])
 
   B -- Ja --> B3([Giltig mening<br/>X05])
-  B3 --> B4[Kör extrahering av regelvillkor<br/>eller brus på aktuell mening<br/>P51]
+  B3 --> B4[Kör klassificering av regelvillkor<br/>eller brus på aktuell mening<br/>P51]
   B4 --> C[Bedöm klassificering<br/>R51 eller brus<br/>P51]
   C --> D{Är klassificeringen korrekt?<br/>P52}
 
-  D -- Ja --> E[Markera giltig extrahering<br/>P51]
-  E --> F([Godkänd extrahering<br/>av R51 och brus<br/>X05])
+  D -- Ja --> E[Markera giltig klassificering<br/>P51]
+  E --> F([Godkänd klassificering<br/>av R51 och brus<br/>X05])
 
-  D -- Nej --> G[Markera ogiltig extrahering<br/>P51]
+  D -- Nej --> G[Markera ogiltig klassificering<br/>P51]
   G --> H[Ange felkod<br/>P51]
-  H --> I([Extrahering annoterad<br/>för utveckling<br/>X05])
+  H --> I([Klassificering annoterad<br/>för utveckling<br/>X05])
 
   %% === Styles ===
   classDef aktivitet fill:#138D18,stroke:#0b4f0b,color:#fff;
