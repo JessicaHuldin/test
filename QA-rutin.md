@@ -3,12 +3,12 @@ flowchart LR
   A([Material att annotera<br/>X05]) --> A1[Bedöm mening<br/>P51]
   A1 --> B{Är detta en<br/>giltig mening?<br/>P52}
 
-  B -- Nej --> B1[markera ogiltig mening<br/>P51]
+  B -- Nej --> B1[Markera ogiltig mening<br/>P51]
   B1 --> B1a[Ange felkod<br/>P51]
   B1a --> B2([Ogiltig mening<br/>X05])
 
   B -- Ja --> B3([Giltig mening<br/>X05])
-  B3 --> B4[kör extrahering av regelvillkor<br/>eller brus på aktuell<br/>P51]
+  B3 --> B4[Kör extrahering av regelvillkor<br/>eller brus på aktuell<br/>P51]
   B4 --> C[Bedöm klassificering<br/>R51 eller brus<br/>P51]
   C --> D{Är klassificeringen korrekt?<br/>P52}
 
