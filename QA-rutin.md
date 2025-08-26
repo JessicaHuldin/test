@@ -8,7 +8,7 @@ flowchart LR
   B1a --> B2([Ogiltig mening<br/>X05])
 
   B -- Ja --> B3([Giltig mening<br/>X05])
-  B3 --> B4[Kör extrahering av regelvillkor<br/>eller brus på aktuell<br/>P51]
+  B3 --> B4[Kör extrahering av regelvillkor<br/>eller brus på aktuell mening<br/>P51]
   B4 --> C[Bedöm klassificering<br/>R51 eller brus<br/>P51]
   C --> D{Är klassificeringen korrekt?<br/>P52}
 
