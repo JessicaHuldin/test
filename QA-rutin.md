@@ -8,7 +8,7 @@ flowchart LR
   B1 --> B2[Logga: is_valid_sentence = false]
   B2 --> Z([Slut])
 
-  B -- Ja --> C[Steg 2: Klassificera typ<br/>(R51 eller EJ_R51)]
+  B -- Ja --> C[Steg 2: Klassificera typ<br/>R51 eller EJ_R51]
   C --> D{Är klassificeringen<br/>korrekt?}
 
   %% ===== Korrekt =====
@@ -39,6 +39,6 @@ flowchart LR
   class B,D decision;
   class E,E1 good;
   class F,F1,F2,F3 warn;
-  class B1, B2 invalid;
+  class B1,B2 invalid;
   class G,H data;
 ```mermaid
