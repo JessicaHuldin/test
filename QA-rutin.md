@@ -3,8 +3,9 @@ flowchart LR
   A([Material att annotera<br/>X05]) --> A1[Bedöm mening<br/>P51]
   A1 --> B{Är detta en<br/>giltig mening?<br/>P52}
 
-  B -- Nej --> B1[Markera: OGILTIG mening<br/>P51]
-  B1 --> B2([Ogiltig mening<br/>X05])
+  B -- Nej --> B1[markera ogiltig mening<br/>P51]
+  B1 --> B1a[Ange felkod<br/>P51]
+  B1a --> B2([Ogiltig mening<br/>X05])
 
   B -- Ja --> B3([Giltig mening<br/>X05])
   B3 --> C[Bedöm klassificering<br/>R51 eller EJ_R51<br/>P51]
@@ -23,7 +24,6 @@ flowchart LR
   classDef handelse fill:#DAD8D8,stroke:#555,color:#000;
 
   class A,B2,B3,F,I handelse;
-  class A1,B1,C,E,G,H aktivitet;
+  class A1,B1,B1a,C,E,G,H aktivitet;
   class B,D beslut;
-
 ```mermaid
