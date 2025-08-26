@@ -1,6 +1,6 @@
 ```mermaid
 flowchart LR
-  A([Start]) --> A1[Bedöm mening]
+  A([Material att annotera]) --> A1[Bedöm mening]
   A1 --> B{Är detta en<br/>giltig mening?}
 
   B -- Nej --> B1[Markera: OGILTIG mening]
