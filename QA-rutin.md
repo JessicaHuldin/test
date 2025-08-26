@@ -15,6 +15,6 @@ flowchart LR
 
   D -- Nej --> G[Markera ogiltig extrahering]
   G --> H[Ange felkod]
-  H --> I([Ogiltig extrahering])
+  H --> I([Extrahering annoterad<br/>för utveckling])
 
 ```mermaid
