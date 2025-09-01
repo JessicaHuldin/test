@@ -1,104 +1,64 @@
 erDiagram
-    Person {
-      string person_id
-      string namn
-      string persontyp
-    }
+  direction TB
 
-    Personroll {
-      string personroll_id
-      string namn
-    }
+  Person
+  Personroll
+  Rolltilldelning
+  Fil
+  Filtyp
+  Regelverk
+  Dokumentdel
+  Rad
+  Dokumenttyp
+  Annoteringsjobb
+  Annoteringsenhet
+  Annotering
+  Texttyp
+  Annoteringsenhetsstatus
+  Annoteringsenhetstyp
+  Annoteringsjobbstyp
+  Annoteringsstatus
+  Modell
+  KB
 
-    Rolltilldelning {
-      string rolltilldelning_id
-      date giltig_from
-      date giltig_tom
-    }
+  Person ||--o{ Rolltilldelning
+  Personroll ||--o{ Rolltilldelning
+  Person ||--o{ Annoteringsjobb
+  Personroll ||--o{ Fil
+  Fil }o--|| Filtyp
+  Fil }o--|| Regelverk
+  Fil ||--o{ Dokumentdel
+  Dokumentdel ||--o{ Rad
+  Rad }o--|| Dokumenttyp
+  Dokumentdel ||--|{ Annoteringsjobb
+  Annoteringsjobb ||--|{ Annoteringsenhet
+  Annoteringsenhet ||--o{ Annotering
+  Annotering ||--|| Texttyp
+  Annotering ||--|| Annoteringsstatus
+  Annoteringsenhet ||--o{ Texttyp
+  Annoteringsenhet }o--|| Annoteringsenhetstyp
+  Annoteringsenhet ||--|{ Annoteringsenhetsstatus
+  Annoteringsjobb }o--|| Annoteringsjobbstyp
+  Annoteringsenhet }o--|| Modell
+  Annoteringsenhet ||--o{ KB
+  Rad ||--o{ KB
 
-    Filtyp {
-      string filtyp_id
-      string namn
-    }
-
-    Regelverk {
-      string regelverk_id
-      string namn
-      string version
-    }
-
-    Fil {
-      string fil_id
-      string namn
-      string uri
-      date uppladdad_datum
-    }
-
-    Dokumentdel {
-      string dokumentdel_id
-      string typ
-      int ordning
-    }
-
-    Annoteringsjobb {
-      string jobb_id
-      datetime skapad_tid
-      string prioritet
-    }
-
-    Texttyp {
-      string texttyp_id
-      string namn
-    }
-
-    Annoteringsenhet {
-      string enhet_id
-      string källreferens
-      string innehåll_hash
-    }
-
-    Klass {
-      string klass_id
-      string namn
-      string beskrivning
-    }
-
-    Status {
-      string status_id
-      string namn
-    }
-
-    Annotering {
-      string annotering_id
-      datetime skapad_tid
-      string kommentar
-    }
-
-    %% Person ↔ Personroll via Rolltilldelning
-    Person ||--o{ Rolltilldelning : "har"
-    Personroll ||--o{ Rolltilldelning : "gäller"
-
-    %% Fil kopplingar
-    Fil ||--|| Filtyp : "är_av_typ"
-    Fil }o--o{ Regelverk : "omfattas_av"
-    Fil ||--|{ Dokumentdel : "delas_i"
-
-    %% Dokumentdel → jobb/enheter
-    Dokumentdel ||--|| Annoteringsjobb : "har"
-    Dokumentdel ||--|{ Annoteringsenhet : "innehåller"
-
-    %% Annoteringsenhet → Texttyp
-    Texttyp ||--o{ Annoteringsenhet : "typ_av"
-
-    %% Annoteringsjobb → tilldelad annotatör (person)
-    Person ||--o{ Annoteringsjobb : "tilldelad_annotatör"
-
-    %% Annoteringar inom jobb och på enheter
-    Annoteringsjobb ||--o{ Annotering : "innehåller"
-    Annoteringsenhet ||--o{ Annotering : "annoteras_med"
-    Klass ||--o{ Annotering : "används_i"
-    Status ||--o{ Annotering : "har"
-
-    %% (Valfria associationslinjer för rollspecifika aktiviteter)
-    Personroll }o--o{ Fil : "bestämmer/delar_upp/laddar_upp"
-    Personroll }o--o{ Klass : "definierar/underhåller"
+  style Person fill:#D5D4A8,stroke:#D5D4A8
+  style Personroll fill:#D5D4A8,stroke:#D5D4A8
+  style Rolltilldelning fill:#D5D4A8,stroke:#D5D4A8
+  style Fil fill:#D5D4A8,stroke:#D5D4A8
+  style Filtyp fill:#D5D4A8,stroke:#D5D4A8
+  style Regelverk fill:#D5D4A8,stroke:#D5D4A8
+  style Dokumentdel fill:#D5D4A8,stroke:#D5D4A8
+  style Rad fill:#D5D4A8,stroke:#D5D4A8
+  style Dokumenttyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsjobb fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsenhet fill:#D5D4A8,stroke:#D5D4A8
+  style Annotering fill:#D5D4A8,stroke:#D5D4A8
+  style Texttyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsenhetsstatus fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsenhetstyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsjobbstyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsstatus fill:#D5D4A8,stroke:#D5D4A8
+  style Modell fill:#D5D4A8,stroke:#D5D4A8
+  style KB fill:#D5D4A8,stroke:#D5D4A8
