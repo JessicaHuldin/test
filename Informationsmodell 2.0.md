@@ -1,0 +1,69 @@
+---
+config:
+  layout: elk
+title: Sample title
+---
+erDiagram
+  direction TB
+
+  Person
+  Personroll
+  Rolltilldelning
+  Fil
+  Filtyp
+  Regelverk
+  Dokumentdel
+  Rad
+  Dokumenttyp
+  Annoteringsjobb
+  Annoteringsenhet
+  Annotering
+  Texttyp
+  Annoteringsenhetsstatus
+  Annoteringsenhetstyp
+  Annoteringsjobbstyp
+  Annoteringsstatus
+  Modell
+  KB
+
+  Person ||--o{ Rolltilldelning
+  Personroll ||--o{ Rolltilldelning
+  Person ||--o{ Annoteringsjobb
+  Personroll ||--o{ Fil
+  Fil }o--|| Filtyp
+  Fil }o--|| Regelverk
+  Fil ||--o{ Dokumentdel
+  Dokumentdel ||--o{ Rad
+  Rad }o--|| Dokumenttyp
+  Dokumentdel ||--|{ Annoteringsjobb
+  Annoteringsjobb ||--|{ Annoteringsenhet
+  Annoteringsenhet ||--o{ Annotering
+  Annotering ||--|| Texttyp
+  Annotering ||--|| Annoteringsstatus
+  Annoteringsenhet ||--o{ Texttyp
+  Annoteringsenhet }o--|| Annoteringsenhetstyp
+  Annoteringsenhet ||--|{ Annoteringsenhetsstatus
+  Annoteringsjobb }o--|| Annoteringsjobbstyp
+  Annoteringsenhet }o--|| Modell
+  Annoteringsenhet ||--o{ KB
+  Rad ||--o{ KB
+
+  style Person fill:#D5D4A8,stroke:#D5D4A8
+  style Personroll fill:#D5D4A8,stroke:#D5D4A8
+  style Rolltilldelning fill:#D5D4A8,stroke:#D5D4A8
+  style Fil fill:#D5D4A8,stroke:#D5D4A8
+  style Filtyp fill:#D5D4A8,stroke:#D5D4A8
+  style Regelverk fill:#D5D4A8,stroke:#D5D4A8
+  style Dokumentdel fill:#D5D4A8,stroke:#D5D4A8
+  style Rad fill:#D5D4A8,stroke:#D5D4A8
+  style Dokumenttyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsjobb fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsenhet fill:#D5D4A8,stroke:#D5D4A8
+  style Annotering fill:#D5D4A8,stroke:#D5D4A8
+  style Texttyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsenhetsstatus fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsenhetstyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsjobbstyp fill:#D5D4A8,stroke:#D5D4A8
+  style Annoteringsstatus fill:#D5D4A8,stroke:#D5D4A8
+  style Modell fill:#D5D4A8,stroke:#D5D4A8
+  style KB fill:#D5D4A8,stroke:#D5D4A8
