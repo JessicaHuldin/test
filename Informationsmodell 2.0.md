@@ -1,6 +1,5 @@
 ```Mermaid
 
----
 erDiagram
   direction TB
 
