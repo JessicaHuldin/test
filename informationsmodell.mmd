@@ -21,30 +21,30 @@ erDiagram
   Modell
   KB
 
-  Person ||--o{ Rolltilldelning
-  Personroll ||--o{ Rolltilldelning
+  Person ||--{ Rolltilldelning
+  Personroll ||--{ Rolltilldelning
 
-  Person ||--o{ Annoteringsjobb
-  Personroll ||--o{ Fil
+  Person ||--{ Annoteringsjobb
+  Personroll ||--{ Fil
 
   Fil ||--|| Filtyp
   Fil ||--|| Regelverk
-  Fil ||--o{ Dokumentdel
+  Fil ||--{ Dokumentdel
 
-  Dokumentdel ||--o{ Rad
+  Dokumentdel ||--{ Rad
   Rad ||--|| Dokumenttyp
 
-  Dokumentdel ||--|{ Annoteringsjobb
-  Annoteringsjobb ||--|{ Annoteringsenhet
-  Annoteringsenhet ||--o{ Annotering
+  Dokumentdel ||--{ Annoteringsjobb
+  Annoteringsjobb ||--{ Annoteringsenhet
+  Annoteringsenhet ||--{ Annotering
 
   Annotering ||--|| Texttyp
   Annotering ||--|| Annoteringsstatus
-  Annoteringsenhet ||--o{ Texttyp
+  Annoteringsenhet ||--{ Texttyp
   Annoteringsenhet ||--|| Annoteringsenhetstyp
-  Annoteringsenhet ||--|{ Annoteringsenhetsstatus
+  Annoteringsenhet ||--{ Annoteringsenhetsstatus
   Annoteringsjobb ||--|| Annoteringsjobbstyp
   Annoteringsenhet ||--|| Modell
 
-  Annoteringsenhet ||--o{ KB
-  Rad ||--o{ KB
+  Annoteringsenhet ||--{ KB
+  Rad ||--{ KB
