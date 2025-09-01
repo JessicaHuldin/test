@@ -1,8 +1,5 @@
 ```Mermaid
----
-config:
-  layout: elk
-title: Sample title
+
 ---
 erDiagram
   direction TB
