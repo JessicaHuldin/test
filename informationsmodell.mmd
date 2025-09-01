@@ -1,3 +1,8 @@
+---
+config:
+  layout: elk
+title: Sample title
+---
 erDiagram
   direction TB
 
@@ -25,21 +30,21 @@ erDiagram
   Personroll ||--o{ Rolltilldelning
   Person ||--o{ Annoteringsjobb
   Personroll ||--o{ Fil
-  Fil }o--|| Filtyp
-  Fil }o--|| Regelverk
+  Fil ||--|| Filtyp
+  Fil ||--|| Regelverk
   Fil ||--o{ Dokumentdel
   Dokumentdel ||--o{ Rad
-  Rad }o--|| Dokumenttyp
+  Rad ||--|| Dokumenttyp
   Dokumentdel ||--|{ Annoteringsjobb
   Annoteringsjobb ||--|{ Annoteringsenhet
   Annoteringsenhet ||--o{ Annotering
   Annotering ||--|| Texttyp
   Annotering ||--|| Annoteringsstatus
   Annoteringsenhet ||--o{ Texttyp
-  Annoteringsenhet }o--|| Annoteringsenhetstyp
+  Annoteringsenhet ||--|| Annoteringsenhetstyp
   Annoteringsenhet ||--|{ Annoteringsenhetsstatus
-  Annoteringsjobb }o--|| Annoteringsjobbstyp
-  Annoteringsenhet }o--|| Modell
+  Annoteringsjobb ||--|| Annoteringsjobbstyp
+  Annoteringsenhet ||--|| Modell
   Annoteringsenhet ||--o{ KB
   Rad ||--o{ KB
 
