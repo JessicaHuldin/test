@@ -1,3 +1,5 @@
+```Mermaid
+
 ---
 config:
   layout: elk
@@ -67,3 +69,6 @@ erDiagram
   style Annoteringsstatus fill:#D5D4A8,stroke:#D5D4A8
   style Modell fill:#D5D4A8,stroke:#D5D4A8
   style KB fill:#D5D4A8,stroke:#D5D4A8
+
+```Mermaid
+
